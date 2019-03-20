@@ -1,9 +1,7 @@
-const cond = process.env.CONDITION === 1;
+import { foo, bar } from './module';
 
-if (cond) {
-    const { foo } = require('./module');
+if (PRODUCTION) {
     foo();
 } else {
-    const { bar } = require('./module');
     bar();
 }
